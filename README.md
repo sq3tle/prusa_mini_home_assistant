@@ -1,7 +1,6 @@
 # Prusa Mini Integration for Home Assistant
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
-[![HitCount](http://hits.dwyl.com/sq3tle/prusa_mini_home_assistant.svg)](http://hits.dwyl.com/sq3tle/prusa_mini_home_assistant)
 [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
 
 
@@ -46,10 +45,7 @@ sensor:
     - pos_z_mm              # return z height in mm (floating point)
 ```
 
-
-
-
-
+[![HitCount](http://hits.dwyl.com/sq3tle/prusa_mini_home_assistant.svg)](http://hits.dwyl.com/sq3tle/prusa_mini_home_assistant)
 
 
 
