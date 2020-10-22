@@ -1,5 +1,5 @@
 {
-  "name": "Prusa_Connect API",
+  "name": "Prusa Mini Connect API",
   "render_readme": true,
   "domians":  ["sensor"],
   "iot_class": ["Local Polling"]
