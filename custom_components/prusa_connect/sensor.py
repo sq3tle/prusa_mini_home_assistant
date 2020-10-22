@@ -82,11 +82,11 @@ class PrusaApi:
 
     def update(self):
         # gather new values from Prusa Connect interface into self.attributes
-        response = requests.get("http://{}/api/telemetry".format(str(self.host)), timeout=1)
-        if response.status_code == 200:
+        try:
+            response = requests.get("http://{}/api/telemetry".format(str(self.host)), timeout=1)
             response = response.json()
             self.attributes = {'status': 'online'}
-        else:
+        except requests.exceptions.ConnectTimeout:
             response = {}
             self.attributes = {'status': 'offline'}
 
