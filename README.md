@@ -2,7 +2,7 @@
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
 [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
-
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsq3tle%2Fprusa_mini_home_assistant&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 This integration allows you to get current state of the printer via API used by Prusa Connect Web Interface. Customizable pooling time and values to monitor.
 
@@ -44,11 +44,6 @@ sensor:
     - project_name          # return printing job filename
     - pos_z_mm              # return z height in mm (floating point)
 ```
-
-[![HitCount](http://hits.dwyl.com/sq3tle/prusa_mini_home_assistant.svg)](http://hits.dwyl.com/sq3tle/prusa_mini_home_assistant)
-
-
-
 
 
 
