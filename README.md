@@ -1,5 +1,6 @@
 # Prusa Mini Integration for Home Assistant
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
+
 This integration allows you to get current state of the printer via API used by Prusa Connect Web Interface. Customizable pooling time and values to monitor.
 
 
