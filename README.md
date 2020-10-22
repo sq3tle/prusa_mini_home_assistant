@@ -6,8 +6,12 @@ This integration allows you to get current state of the printer via API used by 
 
 ### Manual instalation
 
-  - Get repository and unpack */custom_components/prusa_connect* to */config/custom_components/prusa_connect* 
-  - Add entry in configuration.yaml
+  
+  - Create custom_components folder in your config folder (there is configuration.yaml located)
+  - Create prusa_connect folder inside custom_components
+  - Get repository 
+  - Unpack */custom_components/prusa_connect* to */config/custom_components/prusa_connect* 
+  - Add entry in configuration.yaml as below
   - Restart Home Assistant
 
 ### HACS instalation
