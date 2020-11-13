@@ -1,6 +1,3 @@
-
-
-
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import CONF_HOST, CONF_NAME, CONF_SCAN_INTERVAL, CONF_MONITORED_CONDITIONS
 from homeassistant.helpers.entity import Entity
@@ -102,7 +99,7 @@ class PrusaApi:
             else:
                 self.attributes['status'] = 'printing'
                 self.attributes['time_est'] = int(self.attributes['time_est']) // 60
-                self.attributes['time_tts'] = self.time_to_tts_readable(int(self.attributes['time_est'])):
+                self.attributes['time_tts'] = str(self.time_to_tts_readable(int(self.attributes['time_est'])))
         elif self.attributes['temp_nozzle'] and 50 <= int(self.attributes['temp_nozzle']):
             self.attributes['status'] = 'cooling'
     
