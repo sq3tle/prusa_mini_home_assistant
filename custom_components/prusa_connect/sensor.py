@@ -24,6 +24,7 @@ sensor:
     - time_est              # return estimated time to complete (minutes)
     - project_name          # return printing job filename
     - pos_z_mm              # return z height in mm (floating point)
+    - time_tts              # return time readable by google assistant
 """
 
 SCAN_INTERVAL = timedelta(seconds=60)
@@ -102,7 +103,7 @@ class PrusaApi:
                 self.attributes['time_tts'] = str(self.time_to_tts_readable(int(self.attributes['time_est'])))
         elif self.attributes['temp_nozzle'] and 50 <= int(self.attributes['temp_nozzle']):
             self.attributes['status'] = 'cooling'
-    
+
     @staticmethod
     def time_to_tts_readable(x):
         mins = x % 60
