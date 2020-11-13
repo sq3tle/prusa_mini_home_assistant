@@ -1,3 +1,6 @@
+
+
+
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import CONF_HOST, CONF_NAME, CONF_SCAN_INTERVAL, CONF_MONITORED_CONDITIONS
 from homeassistant.helpers.entity import Entity
@@ -29,7 +32,7 @@ sensor:
 SCAN_INTERVAL = timedelta(seconds=60)
 
 # Available conditions to monitor
-S_AVAILABLE = ['status', 'temp_nozzle', 'temp_bed', 'material', 'progress', 'time_est', 'project_name', 'pos_z_mm']
+S_AVAILABLE = ['status', 'temp_nozzle', 'temp_bed', 'material', 'progress', 'time_est', 'project_name', 'pos_z_mm','time_tts']
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {   # handle config and its validation
@@ -99,5 +102,20 @@ class PrusaApi:
             else:
                 self.attributes['status'] = 'printing'
                 self.attributes['time_est'] = int(self.attributes['time_est']) // 60
+                self.attributes['time_tts'] = self.time_to_tts_readable(int(self.attributes['time_est'])):
         elif self.attributes['temp_nozzle'] and 50 <= int(self.attributes['temp_nozzle']):
             self.attributes['status'] = 'cooling'
+    
+    @staticmethod
+    def time_to_tts_readable(x):
+        mins = x % 60
+        hours = x // 60
+        days = x // 1440
+        hours -= days * 24
+        if days:
+            return '{}d {}h {}m'.format(days, hours, mins)
+        elif hours:
+            return '{}h {}m'.format(hours, mins)
+        else:
+            return '{}m'.format(mins)
+
