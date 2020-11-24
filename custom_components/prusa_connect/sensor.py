@@ -115,5 +115,5 @@ class PrusaApi:
         elif hours:
             return '{}h {}m'.format(hours, mins)
         else:
-            return '{}m 0s'.format(mins)
+            return '0h {}m'.format(mins)
 
