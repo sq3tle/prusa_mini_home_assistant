@@ -64,7 +64,7 @@ class PrusaSensor(Entity):
     @property
     def state(self):
         # return sensor value to home assistant
-        return self.inst.attributes[self.v_name]
+        return self.inst.attributes.get(self.v_name, None)
 
     def update(self):
         # request backend upgrade, but only when called from one instance
