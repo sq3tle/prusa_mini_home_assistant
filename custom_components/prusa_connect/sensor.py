@@ -31,7 +31,7 @@ SCAN_INTERVAL = timedelta(seconds=60)
 
 # Available conditions to monitor
 S_AVAILABLE = ['status', 'temp_nozzle', 'temp_bed', 'material', 'progress', 'time_est', 'project_name', 'pos_z_mm','time_tts']
-META = {'status':[None,'mdi:printer-3d'], 'temp_nozzle':['°C','mdi:printer-3d-nozzle-outline'], 'temp_bed':['°C','mdi:approximately-equal-box'], 'material':['','mdi:bullseye'], 'progress':['%','mdi:file-percent'], 'time_est':[' m','mdi:timer-sand'], 'project_name':[None,'mdi:file'], 'pos_z_mm':['mm','mdi:format-align-justify'],'time_tts':[None,'mdi:timer-sand']}
+META = {'status':[None,'mdi:printer-3d'], 'temp_nozzle':['°C','mdi:printer-3d-nozzle-outline'], 'temp_bed':['°C','mdi:approximately-equal-box'], 'material':['','mdi:bullseye'], 'progress':['%','mdi:file-percent'], 'time_est':[' m','mdi:timer-sand'], 'project_name':[None,'mdi:file'], 'pos_z_mm':[' mm','mdi:format-align-justify'],'time_tts':[None,'mdi:timer-sand']}
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {   # handle config and its validation
