@@ -1,7 +1,7 @@
 {
   "domain": "prusa_connect",
   "name": "Prusa Connect",
-  "version": "1.4a",
+  "version": "1.4.1",
   "documentation": "https://github.com/sq3tle/prusa_mini_home_assistant/blob/main/README.md",
   "issue_tracker": "https://github.com/sq3tle/prusa_mini_home_assistant/issues",
   "codeowners": ["@sq3tle"],
