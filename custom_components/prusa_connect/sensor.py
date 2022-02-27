@@ -25,13 +25,14 @@ sensor:
     - project_name          # return printing job filename
     - pos_z_mm              # return z height in mm (floating point)
     - time_tts              # return time readable by google assistant
+    - print_dur             # return print duration
 """
 
 SCAN_INTERVAL = timedelta(seconds=60)
 
 # Available conditions to monitor
-S_AVAILABLE = ['status', 'temp_nozzle', 'temp_bed', 'material', 'progress', 'time_est', 'project_name', 'pos_z_mm','time_tts']
-META = {'status':[None,'mdi:printer-3d'], 'temp_nozzle':['°C','mdi:printer-3d-nozzle-outline'], 'temp_bed':['°C','mdi:approximately-equal-box'], 'material':['','mdi:bullseye'], 'progress':['%','mdi:file-percent'], 'time_est':[' m','mdi:timer-sand'], 'project_name':[None,'mdi:file'], 'pos_z_mm':[' mm','mdi:format-align-justify'],'time_tts':[None,'mdi:timer-sand']}
+S_AVAILABLE = ['status', 'temp_nozzle', 'temp_bed', 'material', 'progress', 'time_est', 'project_name', 'pos_z_mm','time_tts','print_dur']
+META = {'status':[None,'mdi:printer-3d'], 'temp_nozzle':['°C','mdi:printer-3d-nozzle-outline'], 'temp_bed':['°C','mdi:approximately-equal-box'], 'material':['','mdi:bullseye'], 'progress':['%','mdi:file-percent'], 'time_est':[' m','mdi:timer-sand'], 'project_name':[None,'mdi:file'], 'pos_z_mm':[' mm','mdi:format-align-justify'],'time_tts':[None,'mdi:timer-sand'],'print_dur':[None,'mdi:timer-sand']}
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     {   # handle config and its validation
