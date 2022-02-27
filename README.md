@@ -43,6 +43,7 @@ sensor:
     - project_name          # return printing job filename
     - pos_z_mm              # return z height in mm (floating point)
     - time_tts              # return time readable by google assistant
+    - print_dur             # return print duration
 ```
 
 
